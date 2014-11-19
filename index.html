@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -15,37 +16,40 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Iggy</h1>
-        <p>A tool for consistency based analysis of influence graphs and observed systems behavior</p>
-
-        <p class="view"><a href="https://github.com/bioasp/iggy">View the Project on GitHub <small>bioasp/iggy</small></a></p>
-
+        <h1 class="header">Iggy</h1>
+        <p class="header">A tool for consistency based analysis of influence graphs and observed systems behavior</p>
 
         <ul>
-          <li><a href="https://github.com/bioasp/iggy/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/bioasp/iggy/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/bioasp/iggy">View On <strong>GitHub</strong></a></li>
+          <li class="download"><a class="buttons" href="https://github.com/bioasp/iggy/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/bioasp/iggy/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/bioasp/iggy">View On GitHub</a></li>
         </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/bioasp">bioasp</a></p>
+
+
       </header>
       <section>
         <h2>
-<a name="sign-consistency-on-influence-graphs---diagnosis-repair-prediction" class="anchor" href="#sign-consistency-on-influence-graphs---diagnosis-repair-prediction"><span class="octicon octicon-link"></span></a>Sign Consistency on Influence Graphs - Diagnosis, Repair, Prediction</h2>
+<a id="sign-consistency-on-influence-graphs---diagnosis-repair-prediction" class="anchor" href="#sign-consistency-on-influence-graphs---diagnosis-repair-prediction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sign Consistency on Influence Graphs - Diagnosis, Repair, Prediction</h2>
 
 <p>For many biological systems knowledge bases are available that describe the interaction of its components usually in terms of causal networks and influence graphs. In particular signed influence graphs where edges indicate either positive or negative effect of one node upon another. Building upon a notion of consistency between biochemical/genetic regulations and high-throughput profiles of cell activity. We present an approach to check the consistency of large-scale data sets, provide explanations for inconsistencies by determining minimal representations of conflicts. In practice, this can be used to identify unreliable data or to indicate missing reactions. Further, we address the problem of repairing networks and corresponding yet often discrepant measurements in order to re-establish their mutual consistency and predict unobserved variations even under inconsistency. 
 <a href="http://dx.doi.org/10.5281/zenodo.11098"><img src="https://zenodo.org/badge/5393/bioasp/iggy.png" alt="DOI"></a></p>
 
 <h3>
-<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
 
 <p>You can install iggy by running:</p>
 
 <pre><code>$ pip install --user iggy
 </code></pre>
 
-<p>The executable scripts can then be found in ~/.local/bin.</p>
+<p>On Linux the executable scripts can then be found in <code>~/.local/bin</code></p>
+
+<p>and on MacOS the scripts are under <code>/Users/YOURUSERNAME/Library/Python/2.7/bin</code>.</p>
 
 <h3>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h3>
 
 <p>Typical usage is:</p>
 
@@ -123,12 +127,12 @@ optional arguments:
 </code></pre>
 
 <h3>
-<a name="samples" class="anchor" href="#samples"><span class="octicon octicon-link"></span></a>Samples</h3>
+<a id="samples" class="anchor" href="#samples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Samples</h3>
 
 <p>Sample files available here: <a href="http://www.cs.uni-potsdam.de/%7Esthiele/bioasp/downloads/samples/iggy_demo_data.tar.gz">iggy_demo_data.tar.gz</a></p>
 
 <h3>
-<a name="related-publications" class="anchor" href="#related-publications"><span class="octicon octicon-link"></span></a>Related publications</h3>
+<a id="related-publications" class="anchor" href="#related-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Related publications</h3>
 
 <ul>
 <li><p>Detecting Inconsistencies in Large Biological Networks with Answer Set Programming. (2011). Theory and Practice of Logic Programming. <a href="http://dx.doi.org/10.1007/978-3-540-89982-2_19">DOI</a></p></li>
@@ -136,11 +140,10 @@ optional arguments:
 </ul>
       </section>
       <footer>
-        <p>This project is maintained by <a href="https://github.com/bioasp">bioasp</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
   </body>
 </html>
