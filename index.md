@@ -2,37 +2,103 @@
 layout: index
 ---
 
-# Identification of Bla Blub Units
-Zadada heterogeneous knowledge is necessary to elucidate the regulations in biological systems. In particular, such an integration is widely used to identify functional units, that are sets of genes that can be triggered by the same external stimuli, as biological stresses, and that are linked to similar responses of the system. Although several models and algorithms shown great success for detecting functional units on well-known biological species, they fail in identifying them when applied to more exoti species, such as extremophiles, that are by nature unrefined. Shortest Genome mini myni mo (SGS) is a new model of functional units with a predictive power that is comparable to existing methods but overcomes this crucial limitation. In contrary to existing methods, SGS are stable in (i) computational time and (ii) ability to predict functional units when one deteriorates the biological knowledge, which simulates cases that occur for exotic species. 
+## Sign Consistency on Influence Graphs - Diagnosis, Repair, Prediction
 
+For many biological systems knowledge bases are available that describe the interaction of its components usually in terms of causal networks and influence graphs. In particular signed influence graphs where edges indicate either positive or negative effect of one node upon another. Building upon a notion of consistency between biochemical/genetic regulations and high-throughput profiles of cell activity. We present an approach to check the consistency of large-scale data sets, provide explanations for inconsistencies by determining minimal representations of conflicts. In practice, this can be used to identify unreliable data or to indicate missing reactions. Further, we address the problem of repairing networks and corresponding yet often discrepant measurements in order to re-establish their mutual consistency and predict unobserved variations even under inconsistency. 
+[![DOI](https://zenodo.org/badge/5393/bioasp/iggy.png)](http://dx.doi.org/10.5281/zenodo.11098)
 
-### Installation 
+### Installation
 
-You can install shogen by running:
+You can install iggy by running:
 
-	$ pip install --user shogen
-On Linux the executable script can then be found in ``~/.local/bin``
+	$ pip install --user iggy
 
-and on MacOS the script is under ``/Users/YOURUSERNAME/Library/Python/2.7/bin``.
+On Linux the executable scripts can then be found in ``~/.local/bin``
+
+and on MacOS the scripts are under ``/Users/YOURUSERNAME/Library/Python/2.7/bin``.
+
 
 ### Usage
 
 Typical usage is:
-	
-	$ shogen.py [options] genomefile metabolismfile catalysationfile queries
-	
-	Options:
-	  -h, --help   show this help message and exit
-	  -k K, --k=K  Number of ranked  shortest genome segments (Default to 5)
-	  -l L, --l=L  maximum length of a genome segment (Default to 200)
+
+	$ iggy.py network.sif observation.obs --show_colorings 10 --show_predictions
+
+For more options you can ask for help as follows:
+
+	$ iggy.py -h 		
+	usage: iggy.py [-h] [--no_zero_constraints]
+               [--propagate_unambigious_influences] [--no_founded_constraint]
+               [--autoinputs] [--scenfit] [--show_colorings SHOW_COLORINGS]
+               [--show_predictions]
+               networkfile observationfile
+
+	positional arguments:
+	  networkfile           influence graph in SIF format
+	  observationfile       observations in bioquali format
+
+	optional arguments:
+	  -h, --help            show this help message and exit
+	  --no_zero_constraints
+				turn constraints on zero variations OFF, default is ON
+	  --propagate_unambigious_influences
+				turn constraints ON that if all predecessor of a node
+				have the same influence this must have an effect,
+				default is ON
+	  --no_founded_constraint
+				turn constraints OFF that every variation must be
+				explained by an input, default is ON
+	  --autoinputs          compute possible inputs of the network (nodes with
+				indegree 0)
+	  --scenfit             compute scenfit of the data, default is mcos
+	  --show_colorings SHOW_COLORINGS
+				number of colorings to print, default is OFF, 0=all
+	  --show_predictions    show predictions
+
+
+The second script contained is opt_graph.py
+Typical usage is:
+
+	$ opt_graph.py network.sif observations_dir/ --show_repairs 10
+
+For more options you can ask for help as follows:
+
+	$ opt_graph.py -h 	
+	usage: opt_graph.py [-h] [--no_zero_constraints]
+		    [--propagate_unambigious_influences]
+		    [--no_founded_constraint] [--autoinputs]
+		    [--show_repairs SHOW_REPAIRS] [--opt_graph]
+		    networkfile observationfiles
+
+	positional arguments:
+	  networkfile           influence graph in SIF format
+	  observationfiles      directory of observations in bioquali format
+
+	optional arguments:
+	  -h, --help            show this help message and exit
+	  --no_zero_constraints
+				turn constraints on zero variations OFF, default is ON
+	  --propagate_unambigious_influences
+				turn constraints ON that if all predecessor of a node
+				have the same influence this must have an effect,
+				default is ON
+	  --no_founded_constraint
+				turn constraints OFF that every variation must be
+				explained by an input, default is ON
+	  --autoinputs          compute possible inputs of the network (nodes with
+				indegree 0)
+	  --show_repairs SHOW_REPAIRS
+				number of repairs to show, default is OFF, 0=all
+	  --opt_graph           compute opt-graph repairs (allows also adding edges),
+				default is only removing edges
 
 
 ### Samples
 
-Sample files for finding functional gene units in e. coli are available here:
-      [genome.txt](http://bioasp.github.io/downloads/samples/ecoli_K12data/genome.txt) [metabolism.sbml](http://bioasp.github.io/downloads/samples/ecoli_K12data/metabolism.txt) [catalyze.txt](http://bioasp.github.io/downloads/samples/ecoli_K12data/catalyze.txt) [queries.txt](http://bioasp.github.io/downloads/samples/ecoli_K12data/queries.txt)
-
+Sample files available here: [iggy_demo_data.tar.gz](http://www.cs.uni-potsdam.de/~sthiele/bioasp/downloads/samples/iggy_demo_data.tar.gz)
 
 ### Related publications
 
-An ASP application in integrative biology: identification of functional gene units. (2013). 12th International Conference on Logic Programming and Nonmonotonic Reasoning. [DOI](http://dx.doi.org/10.1007/978-3-642-40564-8_21)
+* Detecting Inconsistencies in Large Biological Networks with Answer Set Programming. (2011). Theory and Practice of Logic Programming. [DOI](http://dx.doi.org/10.1007/978-3-540-89982-2_19)
+
+* Repair and Prediction (under Inconsistency) in Large Biological Networks with Answer Set Programming.(2010). 12th International Conference on the Principles of Knowledge Representation and Reasoning.[DOI](http://aaai.org/ocs/index.php/KR/KR2010/paper/view/1334/1660)
