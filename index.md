@@ -1,5 +1,7 @@
 ---
 layout: index
+title: Iggy
+tagline: 'A tool for consistency based analysis of influence graphs and observed systems behavior'
 ---
 
 ## Sign Consistency on Influence Graphs - Diagnosis, Repair, Prediction
