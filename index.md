@@ -105,3 +105,50 @@ Sample files available here: [iggy\_demo\_data.tar.gz](http://www.cs.uni-potsdam
 * *Detecting Inconsistencies in Large Biological Networks with Answer Set Programming.* (2011). Theory and Practice of Logic Programming. [DOI](http://dx.doi.org/10.1007/978-3-540-89982-2_19)
 
 * *Repair and Prediction (under Inconsistency) in Large Biological Networks with Answer Set Programming.* (2010). 12th International Conference on the Principles of Knowledge Representation and Reasoning.[DOI](http://aaai.org/ocs/index.php/KR/KR2010/paper/view/1334/1660)
+ 
+### FAQ
+
+**Q**: I don't have pip. How can I install pip without admin rights?
+
+**A**: You can install pip without admin rights.
+
+1. Download [getpip.py](https://raw.github.com/pypa/pip/master/contrib/get-pip.py).
+
+		$ wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+
+2. Install pip locally. 
+
+		$ python get-pip.py --user
+
+3. You can install using your local pip.
+
+
+**Q**: I don't have pip. How can I install iggy without pip?
+
+**A**:  You can install iggy without pip if you take care of the dependencies yourself.
+
+1. Download [pyasp-1.3.3](https://pypi.python.org/pypi/pyasp/1.3.3). 
+ 
+		$ wget https://pypi.python.org/packages/source/p/pyasp/pyasp-1.3.3.tar.gz
+
+2. Extract and install pyasp. 
+
+		$ gzip -d pyasp-1.3.3.tar.gz
+		$ tar -xvf pyasp-1.3.3.tar
+		$ cd pyasp-1.3.3
+		$ python setup.py install --user
+
+3. Download [iggy-0.4](https://pypi.python.org/pypi/iggy/0.4). 
+
+		$ wget https://pypi.python.org/packages/source/i/iggy/iggy-0.4.tar.gz
+ 
+4. Extract and install ingranalyze.
+
+		$ gzip -d iggy-0.4.tar.gz
+		$ tar -xvf iggy-0.4.tar
+		$ cd iggy-0.4
+		$ python setup.py install --user
+	
+
+   The executable script can then be found in ``~/.local/bin`` on Linux and in ``/Users/YOURUSERNAME/Library/Python/2.7/bin``on Mac OS.
+
