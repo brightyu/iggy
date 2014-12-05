@@ -102,6 +102,6 @@ Sample files available here: [iggy\_demo\_data.tar.gz](http://www.cs.uni-potsdam
 
 ### Related publications
 
-* Detecting Inconsistencies in Large Biological Networks with Answer Set Programming. (2011). Theory and Practice of Logic Programming. [DOI](http://dx.doi.org/10.1007/978-3-540-89982-2_19)
+* *Detecting Inconsistencies in Large Biological Networks with Answer Set Programming.* (2011). Theory and Practice of Logic Programming. [DOI](http://dx.doi.org/10.1007/978-3-540-89982-2_19)
 
-* Repair and Prediction (under Inconsistency) in Large Biological Networks with Answer Set Programming.(2010). 12th International Conference on the Principles of Knowledge Representation and Reasoning.[DOI](http://aaai.org/ocs/index.php/KR/KR2010/paper/view/1334/1660)
+* *Repair and Prediction (under Inconsistency) in Large Biological Networks with Answer Set Programming.* (2010). 12th International Conference on the Principles of Knowledge Representation and Reasoning.[DOI](http://aaai.org/ocs/index.php/KR/KR2010/paper/view/1334/1660)
