@@ -152,3 +152,10 @@ Sample files available here: [iggy\_demo\_data.tar.gz](http://www.cs.uni-potsdam
 
    The executable script can then be found in ``~/.local/bin`` on Linux and in ``/Users/YOURUSERNAME/Library/Python/2.7/bin``on Mac OS.
 
+
+**Q**: How can I write the output of iggy into a file?
+
+**A**:  You can redirect the output of iggy using ``>`` into a file. For example to write the results into the file ``myfile.txt`` type:
+
+		$ iggy.py network.sif observation.obs --show_colorings 10 --show_predictions > myfile.txt
+	
