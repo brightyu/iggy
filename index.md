@@ -138,15 +138,15 @@ Sample files available here: [iggy\_demo\_data.tar.gz](http://www.cs.uni-potsdam
 		$ cd pyasp-1.3.3
 		$ python setup.py install --user
 
-3. Download [iggy-0.4](https://pypi.python.org/pypi/iggy/0.4). 
+3. Download [iggy-0.5](https://pypi.python.org/pypi/iggy/0.5). 
 
-		$ wget https://pypi.python.org/packages/source/i/iggy/iggy-0.4.tar.gz
+		$ wget https://pypi.python.org/packages/source/i/iggy/iggy-0.5.tar.gz
  
 4. Extract and install ingranalyze.
 
-		$ gzip -d iggy-0.4.tar.gz
-		$ tar -xvf iggy-0.4.tar
-		$ cd iggy-0.4
+		$ gzip -d iggy-0.5.tar.gz
+		$ tar -xvf iggy-0.5.tar
+		$ cd iggy-0.5
 		$ python setup.py install --user
 	
 
