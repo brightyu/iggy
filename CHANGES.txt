@@ -1,3 +1,6 @@
+0.6
+more unified output strings
+
 0.5
 fixed problem with wrongly computed numbers of unlabeled nodes and measured nodes which are not in the model
 fixed problem with doubled soultions when enumerating colorings resp. repairs
