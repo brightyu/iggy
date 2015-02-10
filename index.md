@@ -157,5 +157,5 @@ Sample files available here: [iggy\_demo\_data.tar.gz](http://www.cs.uni-potsdam
 
 **A**:  You can redirect the output of iggy using ``>`` into a file. For example to write the results into the file ``myfile.txt`` type:
 
-		$ iggy.py network.sif observation.obs --show_colorings 10 --show_predictions > myfile.txt
+		$ iggy.py network.sif observation.obs --show_labelings 10 --show_predictions > myfile.txt
 	
