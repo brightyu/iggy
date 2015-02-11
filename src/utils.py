@@ -46,19 +46,24 @@ def print_predictions(predictions) :
     pred_not_minus.difference_update(pred_zero)
     pred_change.difference_update(pred_minus)
     pred_change.difference_update(pred_plus)
+    
+    circledminus=u'\u2296'
+    circledplus=u'\u2A01'
+    plusminus=u'\u00B1'
+    
     for p in pred_plus :      print '  ',p,'= +'
     for p in pred_minus :     print '  ',p,'= -'
     for p in pred_zero :      print '  ',p,'= 0'
-    for p in pred_not_plus :  print '  ',p,'= NOT +'
-    for p in pred_not_minus : print '  ',p,'= NOT -'
-    for p in pred_change :    print '  ',p,'= CHANGE'
-    
+    for p in pred_not_plus :  print '  ',p,'= NOT +'# circled minus
+    for p in pred_not_minus : print '  ',p,'= NOT -'# circled plus
+    for p in pred_change :    print '  ',p,'= CHANGE'# plus minus
+        
     print ' \n   predicted +:',len(pred_plus),
     print ' predicted -:',len(pred_minus),
     print ' predicted 0:',len(pred_zero),
-    print ' predicted NOT +:',len(pred_not_plus),
-    print ' predicted NOT -:',len(pred_not_minus),
-    print ' predicted CHANGE:',len(pred_change)
+    print ' predicted NOT +:',len(pred_not_plus), # circled minus
+    print ' predicted NOT -:',len(pred_not_minus), # circled plus
+    print ' predicted CHANGE:',len(pred_change) # plus minus
 
     
 def print_labeling(labelings) :
