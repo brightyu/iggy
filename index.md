@@ -22,6 +22,7 @@ and on Mac OS the scripts are under ``/Users/YOURUSERNAME/Library/Python/2.7/bin
 
 ### Usage
 
+You can download the [iggy users guide](https://bioasp.github.io/iggy/guide/guide.pdf).
 Typical usage is:
 
 	$ iggy.py network.sif observation.obs --show_labelings 10 --show_predictions
