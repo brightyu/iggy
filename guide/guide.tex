@@ -35,15 +35,67 @@ In practice, this can be used to identify unreliable data or to indicate missing
 Further, \iggy\ addresses the problem of repairing networks and corresponding yet often discrepant measurements
 in order to re-establish their mutual consistency and predict unobserved variations even under inconsistency
  
+\section{Prerequisites} 
+\iggy\ is a python application that uses the power of answer set solving technology to compute its solution.
+Therefore it depends on the \texttt{PyASP} library, a python wrapper for the solvers from the Potassco Answer Set Solving Collection.
+All dependencies are automatically resolved and installed via \texttt{pip}, the recommended package installer for the Python Package index where the software is hosted.
+The \texttt{PyASP} package detects the running system and installs the matching binaries of the answer set grounder \texttt{gringo} and solver \texttt{clasp}.
+\iggy\ runs on the Linux and Mac OS operating systems Windows is currently {\bf not} supported.
+ 
  
 \section{Installation}
 
+\subsection{Installation using \texttt{pip}}
 You can install the \iggy\ package by running:
 
 \begin{Verbatim}[frame=single]
 $ pip install --user iggy
 \end{Verbatim} 
 
+
+On Linux the executable scripts can then be found in \texttt{~/.local/bin}
+
+and on Mac OS the scripts are under \texttt{/Users/YOURUSERNAME/Library/Python/2.7/bin}.
+
+
+\subsection{Installation of \texttt{pip}}
+If \texttt{pip} is not installed one can install \texttt{pip} without admin rights.
+Therefore one has to first download \texttt{getpip.py} via:
+\begin{Verbatim}[frame=single]
+$ wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+\end{Verbatim} 
+and then install pip locally:
+\begin{Verbatim}[frame=single]
+$ python get-pip.py --user
+\end{Verbatim} 
+Now it is possible to use the local pip and proceed with the section \emph{Installation of \texttt{pip}}.
+
+\subsection{Installation without \texttt{pip}}
+Although we do not recommend it, it is possible to install \iggy\ without \texttt{pip}.
+But then one has to take care of the dependencies oneself.
+Therefore one has to first download \texttt{pyasp-1.3.3}.
+
+\begin{Verbatim}[frame=single]
+$ wget https://pypi.python.org/packages/source/p/pyasp/pyasp-1.3.3.tar.gz
+\end{Verbatim}
+Next one has to extract and install \texttt{PyASP}:
+\begin{Verbatim}[frame=single]
+$ gzip -d pyasp-1.3.3.tar.gz
+$ tar -xvf pyasp-1.3.3.tar
+$ cd pyasp-1.3.3
+$ python setup.py install --user
+\end{Verbatim}
+Then one needs to download \texttt{iggy-0.5}:
+\begin{Verbatim}[frame=single]
+$ wget https://pypi.python.org/packages/source/i/iggy/iggy-0.5.tar.gz
+\end{Verbatim}
+and to extract and install ingranalyze:
+\begin{Verbatim}[frame=single]
+$ gzip -d iggy-0.5.tar.gz
+$ tar -xvf iggy-0.5.tar
+$ cd iggy-0.5
+$ python setup.py install --user
+\end{Verbatim}
 
 On Linux the executable scripts can then be found in \texttt{~/.local/bin}
 
