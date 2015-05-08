@@ -9,7 +9,7 @@
 
 \title{ \iggy  \\
 User Guide \\
-version 0.6
+version 1.2
 }
 
 \author{Sven Thiele}
@@ -55,7 +55,7 @@ $ pip install --user iggy
 
 On Linux the executable scripts can then be found in \texttt{~/.local/bin}
 
-and on Mac OS the scripts are under \texttt{/Users/YOURUSERNAME/Library/Python/2.7/bin}.
+and on Mac OS the scripts are under \texttt{/Users/YOURUSERNAME/Library/Python/3.1/bin}.
 
 
 \subsection{Installation of \texttt{pip}}
@@ -73,27 +73,27 @@ Now it is possible to use the local pip and proceed with the section \emph{Insta
 \subsection{Installation without \texttt{pip}}
 Although we do not recommend it, it is possible to install \iggy\ without \texttt{pip}.
 But then one has to take care of the dependencies oneself.
-Therefore one has to first download \texttt{pyasp-1.3.3}.
+Therefore one has to first download \texttt{pyasp-1.4.1}.
 
 \begin{Verbatim}[frame=single]
-$ wget https://pypi.python.org/packages/source/p/pyasp/pyasp-1.3.3.tar.gz
+$ wget https://pypi.python.org/packages/source/p/pyasp/pyasp-1.4.1.tar.gz
 \end{Verbatim}
 Next one has to extract and install \texttt{PyASP}:
 \begin{Verbatim}[frame=single]
-$ gzip -d pyasp-1.3.3.tar.gz
-$ tar -xvf pyasp-1.3.3.tar
-$ cd pyasp-1.3.3
+$ gzip -d pyasp-1.4.1.tar.gz
+$ tar -xvf pyasp-1.4.1.tar
+$ cd pyasp-1.4.1
 $ python setup.py install --user
 \end{Verbatim}
-Then one needs to download \texttt{iggy-0.5}:
+Then one needs to download \texttt{iggy-1.2}:
 \begin{Verbatim}[frame=single]
-$ wget https://pypi.python.org/packages/source/i/iggy/iggy-0.5.tar.gz
+$ wget https://pypi.python.org/packages/source/i/iggy/iggy-1.2.tar.gz
 \end{Verbatim}
 and to extract and install ingranalyze:
 \begin{Verbatim}[frame=single]
-$ gzip -d iggy-0.5.tar.gz
-$ tar -xvf iggy-0.5.tar
-$ cd iggy-0.5
+$ gzip -d iggy-1.2.tar.gz
+$ tar -xvf iggy-1.2.tar
+$ cd iggy-1.2
 $ python setup.py install --user
 \end{Verbatim}
 
@@ -187,6 +187,8 @@ Line 3 states that \texttt{stat5ab\_py} has \emph{decreased} (\texttt{-}) and
 line 4 states that \texttt{ras} has \emph{not changed} (\texttt{0}).
 Line 5 states that an \emph{uncertain decrease} (\texttt{notPlus}) has been observed in \texttt{plcg} and
 line 6 states that an \emph{uncertain increase} (\texttt{notMinus}) has been observed in \texttt{mtorc1}.
+Line 7 states that \texttt{akt} is initially on the minimum level, this means it cannot further decrease, and
+line 8 states that \texttt{gab1} is initially on the maximum level, this means it cannot further increase.
 
 \begin{Verbatim}[frame=single,numbers=left]
 depor         = input 
@@ -195,6 +197,8 @@ stat5ab_py    = -
 ras           = 0
 plcg          = notPlus
 mtorc1        = notMinus
+akt           = MIN
+gab1          = MAX
 \end{Verbatim}  
 
 
