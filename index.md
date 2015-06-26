@@ -99,7 +99,7 @@ For more options you can ask for help as follows:
 
 ### Samples
 
-Sample files available here: [demo\_data.tar.gz](https://github.com/bioasp/iggy/blob/gh-pages/downloads/demo_data.tar.gz)
+Sample files available here: [demo\_data.tar.gz](https://bioasp.github.io/iggy/downloads/demo_data.tar.gz)
 
 ### Related publications
 
