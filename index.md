@@ -103,7 +103,7 @@ Sample files available here: [demo\_data.tar.gz](https://bioasp.github.io/iggy/d
 
 ### Related publications
 
-* *Extended notions of sign consistency to relate experimental data to signaling and regulatory network topologies* (2015). BMC Bioinformatics. [DOI](http://dx.doi.org/10.1186/s12859-015-0733-7)
+*   [*Extended notions of sign consistency to relate experimental data to signaling and regulatory network topologies*](http://dx.doi.org/10.1186/s12859-015-0733-7) (2015). BMC Bioinformatics.
 
 * *Repair and Prediction (under Inconsistency) in Large Biological Networks with Answer Set Programming.* (2010). 12th International Conference on the Principles of Knowledge Representation and Reasoning. [DOI](http://aaai.org/ocs/index.php/KR/KR2010/paper/view/1334/1660)
 
