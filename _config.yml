@@ -1,2 +1,2 @@
-highlighter: pygments
-markdown: redcarpet
+highlighter: rouge
+markdown: kramdown
