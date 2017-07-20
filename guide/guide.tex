@@ -112,11 +112,18 @@ $ iggy.py network.sif observation.obs --show_labelings 10 --show_predictions
 For more options you can ask for help as follows:
 \begin{Verbatim}[frame=single]
 $ iggy.py -h        
-usage: iggy.py [-h] [--no_zero_constraints]
-           [--propagate_unambigious_influences] [--no_founded_constraint]
-           [--autoinputs] [--scenfit] [--show_labelings SHOW_LABELINGS]
-           [--show_predictions]
-           networkfile observationfile
+usage: iggy.py [-h] [--no_fwd_propagation] [--no_founded_constraints]
+               [--elempath] [--depmat] [--mics] [--autoinputs] [--scenfit]
+               [--show_labelings SHOW_LABELINGS] [--show_predictions]
+               networkfile observationfile
+
+Iggy confronts biological networks given as interaction graphs with
+experimental observations given as signs that represent the concentration
+changes between two measured states. Iggy supports the incorporation of
+uncertain measurements, discovers inconsistencies in data or network, applies
+minimal repairs, and predicts the behavior of unmeasured species. In
+particular, it distinguishes strong predictions (e.g. increase of a node
+level) and weak predictions (e.g., node level increases or remains unchanged).
 
 positional arguments:
   networkfile           influence graph in SIF format
@@ -124,20 +131,20 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
-  --no_zero_constraints
-            turn constraints on zero variations OFF, default is ON
-  --propagate_unambigious_influences
-            turn constraints ON that if all predecessor of a node
-            have the same influence this must have an effect,
-            default is ON
-  --no_founded_constraint
-            turn constraints OFF that every variation must be
-            explained by an input, default is ON
+  --no_fwd_propagation  turn forward propagation OFF, default is ON
+  --no_founded_constraints
+                        turn constraints OFF that every variation must be
+                        founded in an input, default is ON
+  --elempath            a change must be explained by an elementary path from
+                        an input.
+  --depmat              combines multiple states, a change must be explained
+                        by an elementary path from an input.
+  --mics                compute minimal inconsistent cores
   --autoinputs          compute possible inputs of the network (nodes with
-            indegree 0)
+                        indegree 0)
   --scenfit             compute scenfit of the data, default is mcos
   --show_labelings SHOW_LABELINGS
-            number of labelings to print, default is OFF, 0=all
+                        number of labelings to print, default is OFF, 0=all
   --show_predictions    show predictions
 \end{Verbatim} 
 
