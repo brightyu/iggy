@@ -9,7 +9,7 @@
 
 \title{ \iggy  \\
 User Guide \\
-version 1.2
+version 1.4.1
 }
 
 \author{Sven Thiele}
@@ -62,7 +62,7 @@ and on Mac OS the scripts are under \texttt{/Users/YOURUSERNAME/Library/Python/3
 If \texttt{pip} is not installed one can install \texttt{pip} without admin rights.
 Therefore one has to first download \texttt{getpip.py} via:
 \begin{Verbatim}[frame=single]
-$ wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+$ wget https://bootstrap.pypa.io/get-pip.py
 \end{Verbatim} 
 and then install pip locally:
 \begin{Verbatim}[frame=single]
@@ -73,33 +73,33 @@ Now it is possible to use the local pip and proceed with the section \emph{Insta
 \subsection{Installation without \texttt{pip}}
 Although we do not recommend it, it is possible to install \iggy\ without \texttt{pip}.
 But then one has to take care of the dependencies oneself.
-Therefore one has to first download \texttt{pyasp-1.4.1}.
+Therefore one has to first download \texttt{pyasp-1.4.3}.
 
 \begin{Verbatim}[frame=single]
-$ wget https://pypi.python.org/packages/source/p/pyasp/pyasp-1.4.1.tar.gz
+$ wget https://pypi.python.org/packages/source/p/pyasp/pyasp-1.4.3.tar.gz
 \end{Verbatim}
 Next one has to extract and install \texttt{PyASP}:
 \begin{Verbatim}[frame=single]
-$ gzip -d pyasp-1.4.1.tar.gz
-$ tar -xvf pyasp-1.4.1.tar
-$ cd pyasp-1.4.1
+$ gzip -d pyasp-1.4.3.tar.gz
+$ tar -xvf pyasp-1.4.3.tar
+$ cd pyasp-1.4.3
 $ python setup.py install --user
 \end{Verbatim}
-Then one needs to download \texttt{iggy-1.2}:
+Then one needs to download \texttt{iggy-1.4.1}:
 \begin{Verbatim}[frame=single]
-$ wget https://pypi.python.org/packages/source/i/iggy/iggy-1.2.tar.gz
+$ wget https://pypi.python.org/packages/source/i/iggy/iggy-1.4.1.tar.gz
 \end{Verbatim}
 and to extract and install ingranalyze:
 \begin{Verbatim}[frame=single]
-$ gzip -d iggy-1.2.tar.gz
-$ tar -xvf iggy-1.2.tar
-$ cd iggy-1.2
+$ gzip -d iggy-1.4.1.tar.gz
+$ tar -xvf iggy-1.4.1.tar
+$ cd iggy-1.4.1
 $ python setup.py install --user
 \end{Verbatim}
 
 On Linux the executable scripts can then be found in \texttt{~/.local/bin}
 
-and on Mac OS the scripts are under \texttt{/Users/YOURUSERNAME/Library/Python/2.7/bin}.
+and on Mac OS the scripts are under \texttt{/Users/YOURUSERNAME/Library/Python/3.5/bin}.
 
 
 
