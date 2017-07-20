@@ -115,9 +115,9 @@ Sample files available here: [demo\_data.tar.gz](https://bioasp.github.io/iggy/d
 
 **A**: You can install pip without admin rights.
 
-1. Download [getpip.py](https://raw.github.com/pypa/pip/master/contrib/get-pip.py).
+1. Download [getpip.py](https://bootstrap.pypa.io/get-pip.py).
 
-		$ wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+		$ wget https://bootstrap.pypa.io/get-pip.py
 
 2. Install pip locally. 
 
@@ -136,9 +136,9 @@ Sample files available here: [demo\_data.tar.gz](https://bioasp.github.io/iggy/d
 
 2. Extract and install pyasp. 
 
-		$ gzip -d pyasp-1.4.1.tar.gz
-		$ tar -xvf pyasp-1.4.1.tar
-		$ cd pyasp-1.3.3
+		$ gzip -d pyasp-1.4.3.tar.gz
+		$ tar -xvf pyasp-1.4.3.tar
+		$ cd pyasp-1.4.3
 		$ python setup.py install --user
 
 3. Download [iggy-1.2](https://pypi.python.org/pypi/iggy/1.4.1). 
