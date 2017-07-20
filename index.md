@@ -17,7 +17,7 @@ You can install iggy by running:
 
 On Linux the executable scripts can then be found in ``~/.local/bin``
 
-and on Mac OS the scripts are under ``/Users/YOURUSERNAME/Library/Python/3.2/bin``.
+and on Mac OS the scripts are under ``/Users/YOURUSERNAME/Library/Python/3.5/bin``.
 
 
 ### Usage
@@ -130,9 +130,9 @@ Sample files available here: [demo\_data.tar.gz](https://bioasp.github.io/iggy/d
 
 **A**:  You can install iggy without pip if you take care of the dependencies yourself.
 
-1. Download [pyasp-1.4.1](https://pypi.python.org/pypi/pyasp/1.4.1). 
+1. Download [pyasp-1.4.3](https://pypi.python.org/pypi/pyasp/1.4.3). 
  
-		$ wget https://pypi.python.org/packages/source/p/pyasp/pyasp-1.4.1.tar.gz
+		$ wget https://pypi.python.org/packages/source/p/pyasp/pyasp-1.4.3.tar.gz
 
 2. Extract and install pyasp. 
 
@@ -141,19 +141,19 @@ Sample files available here: [demo\_data.tar.gz](https://bioasp.github.io/iggy/d
 		$ cd pyasp-1.3.3
 		$ python setup.py install --user
 
-3. Download [iggy-1.2](https://pypi.python.org/pypi/iggy/1.2). 
+3. Download [iggy-1.2](https://pypi.python.org/pypi/iggy/1.4.1). 
 
-		$ wget https://pypi.python.org/packages/source/i/iggy/iggy-1.2.tar.gz
+		$ wget https://pypi.python.org/packages/source/i/iggy/iggy-1.4.1.tar.gz
  
 4. Extract and install iggy.
 
-		$ gzip -d iggy-1.2.tar.gz
-		$ tar -xvf iggy-1.2.tar
-		$ cd iggy-1.2
+		$ gzip -d iggy-1.4.1.tar.gz
+		$ tar -xvf iggy-1.4.1.tar
+		$ cd iggy-1.4.1
 		$ python setup.py install --user
 	
 
-   The executable script can then be found in ``~/.local/bin`` on Linux and in ``/Users/YOURUSERNAME/Library/Python/3.2/bin``on Mac OS.
+   The executable script can then be found in ``~/.local/bin`` on Linux and in ``/Users/YOURUSERNAME/Library/Python/3.5/bin``on Mac OS.
 
 
 **Q**: How can I write the output of iggy into a file?
