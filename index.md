@@ -152,7 +152,7 @@ Sample files available here: [demo\_data.tar.gz](https://bioasp.github.io/iggy/d
 		$ cd pyasp-1.4.3
 		$ python setup.py install --user
 
-3. Download [iggy-1.2](https://pypi.python.org/pypi/iggy/1.4.1). 
+3. Download [iggy-1.4.1](https://pypi.python.org/pypi/iggy/1.4.1). 
 
 		$ wget https://pypi.python.org/packages/source/i/iggy/iggy-1.4.1.tar.gz
  
